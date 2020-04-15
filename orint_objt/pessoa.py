@@ -17,7 +17,9 @@ if __name__ == '__main__':
     b = Pessoa(p, nome='Barto')
     print(Pessoa.cumprimentar(p))
     print(id(p))
-    print(p.cumprimentar())
+    print(p.cumprimentar())     # nesse caso p já é automaticamente o 1° parametro
+    print(p.cumprimentar(7))     # como está escrito eu estou passando 2 parametros ao metodo, mas ele não aceita 2 paramtros
+    print(Pessoa.cumprimentar(p, 7))    # essa linha é uma tradução mais explicita do erro da linha de cima
     print(p.nome)
     p.nome = 'Pedrugust'
     print(p.nome)
